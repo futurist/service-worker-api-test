@@ -1,6 +1,8 @@
 # service-worker-api-test
 service-worker-api-test for sw API availability
 
+[Click here to start the test](https://futurist.github.io/service-worker-api-test/static/)
+
 ## Install
 
 ```sh
