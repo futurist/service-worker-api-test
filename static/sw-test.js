@@ -1,19 +1,25 @@
+function isFunction(f) {
+  return typeof f === 'function'
+}
+
 self.addEventListener('message', function(e){
   var type = e.data.type
+  var job
   switch(type){
     case 'claim':
-      e.waitUntil(self.clients.claim()
+      job = self.clients.claim()
       .then(function() {
         return onClaimed()
       })
       .catch(function() {
         console.log('claim error:', err)
-      }))
+      })
       break
     case 'report':
-      e.waitUntil(report())
+      job = report()
       break
   }
+  if(job && isFunction(e.waitUntil)) e.waitUntil(job)
 })
 
 self.skipWaiting()

@@ -1,6 +1,6 @@
 {
   "name": "service-worker-api-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "service-worker-api-test for sw API availability",
   "main": "./static/service-worker-api-test.js",
   "scripts": {
